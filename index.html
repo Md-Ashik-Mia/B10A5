@@ -15,7 +15,7 @@
         <nav class="px-3 py-3">
             <div class="flex justify-between">
                 <div class=" ">
-                  <a class="btn bg-[#B4F461]  text-black">BLOG</a>
+                  <a id="showBlog" class="btn bg-[#B4F461]  text-black" href="./blog.html">BLOG</a>
                 </div>
                 <div class=" flex justify-center items-center gap-2">
                     <img src="./assets/logo.png" alt="">
@@ -32,12 +32,43 @@
         <!-- banner section where is the navigation button are there  -->
         <section class="banner min-h-40 flex justify-center items-center">
             <div class="flex justify-center items-center gap-2">
-                <a class="btn bg-transparent  text-black">Donation</a>
-                <a class="btn bg-[#B4F461]  text-black">History</a>
+                <a id="donationButton" class="btn bg-[#B4F461]  text-black hover:bg-[#B4F461]">Donation</a>
+                <a id="historyButton" class="btn bg-[#B4F461] hover:bg-[#B4F461] text-black">History</a>
             </div>
         </section>
     </header>
-    <main></main>
+    <main class="container mx-auto">
+        <section class="cards w-[90%] mx-auto">
+            <div class="card lg:card-side  shadow-xl">
+                <figure>
+                  <img
+                    src="./assets/noakhali.png"
+                    alt="Album" />
+                </figure>
+                <div class="card-body lg:w-1/2">
+                    <div>
+                        <a class="btn bg-transparent border-none text-black">
+                          <img class="max-h-3" src="./assets/coin.png" alt="">
+                          <span>5500</span>BDT
+                        </a></div>
+                  <h2 class="card-title text-black">Donate for Flood at Noakhali, Bangladesh</h2>
+                  <p class="text-black">The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            <form class="card-actions w-full" action="">
+                  <input type="text" placeholder="Write Your Donation Amount" class="input input-ghost w-full" />
+                  <input class="btn btn-primary w-full bg-[#B4F461]" type="submit" value="Donate Now">
+            </form>
+            
+                </div>
+              </div>
+        </section>
+        <section class="transaction">
+            <h1>this is transaction history</h1>
+        </section>
+    </main>
     <footer></footer>
+
+    <!-- adding js to make intereactable dom  -->
+    <script src="./js/utilities.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
