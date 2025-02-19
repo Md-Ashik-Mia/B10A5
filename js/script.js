@@ -21,13 +21,14 @@ for (button of buttons) {
     ) {
       alert("Please Enter the Correct Amount");
     } else {
-      var currentButton =
-        e.target.parentNode.parentNode.firstElementChild.firstElementChild
-          .children[1];
-      var cardValue = parseInt(currentButton.innerText);
-      currentButton.innerText = cardValue + inputValue;
-      totalBalance.innerText = parseInt(totalBalance.innerText) - inputValue;
+//       var currentButton =
+//         e.target.parentNode.parentNode.firstElementChild.firstElementChild
+//           .children[1];
+//       var cardValue = parseInt(currentButton.innerText);
+//       currentButton.innerText = cardValue + inputValue;
+//       totalBalance.innerText = parseInt(totalBalance.innerText) - inputValue;
 //       modal function here
+       balanceHandle(e,inputValue,totalBalance)
       my_modal_5.showModal();
 //       history posting here 
       var historyHeader =e.target.parentNode.parentNode.children[1].innerText

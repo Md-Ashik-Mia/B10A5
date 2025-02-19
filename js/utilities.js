@@ -25,10 +25,20 @@ function makeHistoryPost(header,inputValue){
     newCard =document.createElement("div")
     newCard.innerHTML=`<div class="card bg-white w-full shadow-xl border-y-4">
           <div class="card-body">
-            <h2 class="card-title text-black text-4xl ">${"You have donated "+inputValue +" $ For the Campaign of "+header}</h2>
-            <p class="text-black text-2xl">${new Date()} </p>
+            <h2 class="card-title text-black lg:text-4xl ">${"You have donated "+inputValue +" $ For the Campaign of "+header}</h2>
+            <p class="text-black lg:text-2xl">${new Date()} </p>
           </div>
         </div>`
     historySection.appendChild(newCard)
     console.log("this is header",header)
+}
+
+
+function balanceHandle(e,inputValue,totalBalance){
+    var currentButton =
+    e.target.parentNode.parentNode.firstElementChild.firstElementChild
+      .children[1];
+  var cardValue = parseInt(currentButton.innerText);
+  currentButton.innerText = cardValue + inputValue;
+  totalBalance.innerText = parseInt(totalBalance.innerText) - inputValue;
 }
