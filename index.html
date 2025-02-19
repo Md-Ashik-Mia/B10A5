@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body class="bg-white">
-    <header class="container mx-auto">
-      <nav class="px-3 py-3">
+    <header class="container mx-auto sticky top-0 left-0 z-10 bg-white">
+      <nav class="px-3 py-3 ">
         <div class="flex justify-between">
           <div class=" ">
             <a
@@ -33,7 +33,7 @@
           <div class="">
             <a class="btn bg-transparent border-none text-black">
               <img class="max-h-3" src="./assets/coin.png" alt="" />
-              <span>5500</span>BDT
+              <span id="totalBalance">5500</span>BDT
             </a>
           </div>
         </div>
@@ -55,21 +55,21 @@
       </section>
     </header>
     <main class="container mx-auto">
-      <section class="themodalsection">
-                      <!-- modal -->
-              <!-- You can open the modal using ID.showModal() method -->
-              <dialog id="my_modal_4" class="modal">
-                <div class="modal-box w-11/12 max-w-5xl">
-                  <h3 class="text-lg font-bold">Hello!</h3>
-                  <p class="py-4">Click the button below to close</p>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <!-- if there is a button, it will close the modal -->
-                      <button  class="btn modalClose">Close</button>
-                    </form>
-                  </div>
-                </div>
-              </dialog>
+      <section class="modalsection">
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box bg-white text-black flex justify-center items-center flex-col">
+            <h3 class="text-lg font-bold">Congrats </h3>
+            <img class="w-14" src="./assets/coin.png" alt="" />
+            <p class="py-4">you Have donated for humankind</p>
+      
+              <form method="dialog">
+                <button class="btn btn-outline btn-error">Close</button>
+                <!-- if there is a button in form, it will close the modal -->
+              </form>
+            
+          </div>
+        </dialog>
       </section>
       <section
         id="cards-container"
@@ -102,6 +102,7 @@
                 type="text"
                 placeholder="Write Your Donation Amount"
                 class="input input-ghost w-full"
+                required
               />
               <input
                 id="buttonCard1"
@@ -113,8 +114,8 @@
           </div>
         </div>
         <div class="card lg:card-side shadow-xl">
-          <figure>
-            <img src="./assets/noakhali.png" alt="Album" />
+          <figure class="w-[38%]">
+            <img class="rounded-xl" src="./assets/rohinga.jpg" alt="Album" />
           </figure>
           <div class="card-body lg:w-1/2">
             <div>
@@ -124,21 +125,17 @@
               </a>
             </div>
             <h2 class="card-title text-black">
-              Donate for Flood at Noakhali, Bangladesh
+              Stand with the Rohingya – Extend a Hand of Hope
             </h2>
             <p class="text-black">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
+              Hundreds of thousands of Rohingya refugees in Bangladesh are living in overcrowded camps, facing extreme hardship with limited access to food, clean water, and healthcare. These families, forced to flee violence, rely on humanitarian aid for survival. Your support can provide essential relief—food, shelter, education, and medical care—to those who need it most. Let’s come together to bring hope and dignity to the Rohingya community. Donate today and make a difference!
             </p>
             <form class="card-actions w-full" action="">
               <input
                 type="text"
                 placeholder="Write Your Donation Amount"
                 class="input input-ghost w-full"
+                required
               />
               <input
                 class="btn donateNow btn-primary w-full bg-[#B4F461]"
@@ -148,11 +145,106 @@
             </form>
           </div>
         </div>
+        <div class="card lg:card-side shadow-xl">
+          <figure class="w-[38%]">
+            <img class="rounded-xl" src="./assets/unknown.jpg" alt="Album" />
+          </figure>
+          <div class="card-body lg:w-1/2">
+            <div>
+              <a class="btn bg-transparent border-none text-black">
+                <img class="max-h-3" src="./assets/coin.png" alt="" />
+                <span>5500</span>BDT
+              </a>
+            </div>
+            <h2 class="card-title text-black">
+              Support the People of the DRC – Every Donation Brings Hope.
+            </h2>
+            <p class="text-black">
+              The Democratic Republic of the Congo (DRC) is facing one of the world’s most severe humanitarian crises, with millions affected by conflict, displacement, hunger, and disease. Families are struggling to access basic necessities like food, clean water, and medical care. Your donation can provide lifesaving aid, support education, and help rebuild communities torn apart by violence. Stand with the people of the DRC—donate today and be a part of the solution.
+            </p>
+            <form class="card-actions w-full" action="">
+              <input
+                type="text"
+                placeholder="Write Your Donation Amount"
+                class="input input-ghost w-full"
+                required
+              />
+              <input
+                class="btn donateNow btn-primary w-full bg-[#B4F461]"
+                type="submit"
+                value="Donate Now"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="card lg:card-side shadow-xl">
+          <figure>
+            <img src="./assets/quota-protest.png" alt="Album" />
+          </figure>
+          <div class="card-body lg:w-1/2">
+            <div>
+              <a class="btn bg-transparent border-none text-black">
+                <img class="max-h-3" src="./assets/coin.png" alt="" />
+                <span>650000</span>BDT
+              </a>
+            </div>
+            <h2 class="card-title text-black">
+              Honor the fallen, heal the wounded—your support can change lives.
+            </h2>
+            <p class="text-black">
+              The brave souls who stood for justice have paid the ultimate price, leaving their families in grief and despair. Many others are still suffering from injuries, struggling to recover without proper medical care. Your donation can provide urgent financial assistance to the families of the deceased, cover medical expenses for the injured, and support those who sacrificed everything for a better future. Let’s stand together in solidarity—donate now to help those who need it most.
+            </p>
+            <form class="card-actions w-full" action="">
+              <input
+                type="text"
+                placeholder="Write Your Donation Amount"
+                class="input input-ghost w-full"
+                required
+              />
+              <input
+                class="btn donateNow btn-primary w-full bg-[#B4F461]"
+                type="submit"
+                value="Donate Now"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="card lg:card-side shadow-xl">
+          <figure class="w-[38%] ">
+            <img class="rounded-xl" src="./assets/gaza-aid-1.jpg" alt="Album" />
+          </figure>
+          <div class="card-body lg:w-1/2">
+            <div>
+              <a class="btn bg-transparent border-none text-black">
+                <img class="max-h-3" src="./assets/coin.png" alt="" />
+                <span>5500</span>BDT
+              </a>
+            </div>
+            <h2 class="card-title text-black">
+             Stand for the People of Gaza 
+            </h2>
+            <p class="text-black">
+              The people of Gaza are facing an unimaginable humanitarian crisis, struggling with limited access to food, clean water, and medical supplies. Every donation, no matter how small, can bring relief to those in desperate need. Your generosity can provide essential aid, shelter, and hope to families who have lost everything. Stand with Gaza today—donate now and be a part of the change!
+            </p>
+            <form class="card-actions w-full" action="">
+              <input
+                type="text"
+                placeholder="Write Your Donation Amount"
+                class="input input-ghost w-full"
+                required
+              />
+              <input
+                class="btn donateNow btn-primary w-full bg-[#B4F461]"
+                type="submit"
+                value="Donate Now"
+              />
+            </form>
+          </div>
+        </div>
+        
       </section>
-      <section id="historySection" class="transaction container mx-auto hidden">
-        <h1 class="text-black text-2xl font-semibold text-center">
-          this is transaction history
-        </h1>
+      <section id="historySection" class="transaction container mx-auto hidden min-h-full">
+
       </section>
     </main>
     <footer></footer>

@@ -19,3 +19,16 @@ function showSection(id){
     }
 
 }
+
+function makeHistoryPost(header,inputValue){
+    var historySection = document.getElementById("historySection")
+    newCard =document.createElement("div")
+    newCard.innerHTML=`<div class="card bg-white w-full shadow-xl border-y-4">
+          <div class="card-body">
+            <h2 class="card-title text-black text-4xl ">${"You have donated "+inputValue +" $ For the Campaign of "+header}</h2>
+            <p class="text-black text-2xl">${new Date()} </p>
+          </div>
+        </div>`
+    historySection.appendChild(newCard)
+    console.log("this is header",header)
+}
